@@ -1,0 +1,86 @@
+.inner-text, .title {
+  padding-left: 4vw;
+  padding-right: 4vw;
+  }
+  
+  .inner-text {
+      font-size: 2vw;
+  }
+  
+  .inner-title {
+      font-size: 2.5vw;
+  }
+  
+  .title {
+      font-size: 5vw;
+      margin-bottom: 8vw;
+  }
+  .left-img {
+      width: 55%;
+  }
+  
+  #card {
+    display: block;
+    max-height: 90vh;
+    width: 36vw;
+    height: 60vw;
+    position: relative;
+    -webkit-perspective: 700;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .main-card:hover .face {
+    -webkit-transition: all 0.3s ease-out;
+  }
+  
+  .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: visible;
+    -webkit-transition: all 0.5s ease-out;
+    -webkit-transform-origin: 0 0;
+  }
+  
+  .front {
+    -webkit-transform: rotateY(-20deg);
+    z-index: 3;
+    -webkit-backface-visibility: hidden;
+    box-shadow: inset 0 0 0 2.5vw #008be8;
+    background-color: #cceaff;
+  }
+  
+  .inner-left {
+    -webkit-transform: rotateY(-20deg);
+    z-index: 2;
+  }
+  
+  .inner-left > div {
+    -webkit-transform: rotateY(180deg);
+      box-shadow: inset -2vw 0px 3vw rgba(0,0,0,0.25);
+      background-color: #d6eeff;
+  }
+  
+  .inner-right {
+    -webkit-transform: rotateY(0deg);
+    z-index: 1;
+    box-shadow: inset 2vw 0px 3vw rgba(0,0,0,0.25);
+    border-left: 1px solid #98abb8;
+    background-color: #d6eeff;
+  }
+  
+  .main-card:hover .front,
+  .main-card:hover .inner-left {
+    -webkit-transform: rotateY(-35deg);
+  }
+  
+  .card-toggle:checked + .main-card .front,
+  .card-toggle:checked + .main-card .inner-left {
+    -webkit-transform: rotateY(-165deg);
+  }
+  
+  .card-toggle:checked + .main-card .inner-right {
+    -webkit-transform: rotateY(-15deg);
+  }

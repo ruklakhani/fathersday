@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- card CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Happy Father's Day!</title>
+</head>
+<body class="bg-dark">
+    <input type="checkbox" id="card-toggle" class="card-toggle border-none d-none" value="selected">
+    <label class="my-3 main-card" id="card" for="card-toggle">
+        <div class='front face w-100 h-100 rounded-right border border-secondary d-flex align-items-center'>
+            <div class="text-center title col">Happy Father's Day!</div>
+        </div>
+        <div class="inner-left face w-100 h-100">
+            <div class="w-100 h-100 rounded-left d-flex align-items-center">
+                <div class="text-center mx-auto"><img class="mx-auto left-img"src="dad_and_ruk.jpg"></div>
+
+            </div>
+        </div>
+        <div class="inner-right face w-100 h-100 rounded-right d-flex align-items-center">
+            <div class="text-center inner-text col">
+                <span class="inner-title">Hi Dad,</span><br>
+                Happy Father's Day!!! I just wanted to say how much I love you and<br>
+                thank you for everything you've done for me. We've both grown so much<br>
+                together. I hope our relationship continues to blossom :)<br>
+                From, Ruk.<br><br>
+                <div class="text-center"><img class="w-75 right-img"src="family.jpg"></div>
+            </div>
+        </div>
+    </label>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#card-toggle").change(function() {
+                if(this.checked) {
+                    console.log("marginLeft: '50%', marginRight: '0'");
+                    $('#card').animate({marginLeft: '50%', marginRight: '0'}, 500);
+                }else {
+                    console.log("marginLeft: '25%', marginRight: '25%'");
+                    $('#card').animate({marginLeft: '32vw', marginRight: '32vw'}, 500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
